@@ -3,16 +3,17 @@ import { useState } from "react";
 import ContactList from "./components/ContactList";
 import SelectedContact from "./components/SelectedContact";
 
-export default function App({ setSelectedContactId }) {
-    ContactList, setSelectedContactId = {setSelectedContactId} 
-
-  return (
-    <>
-      {selectedContactId ? (
-        <div>Selected Contact View</div>
-      ) : (
-        <ContactList />
-      )}
-    </>
-  );
-}
+useEffect(() => {
+    async function fetchContacts() {
+      try {
+        const response = await fetch(
+          "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
+        );
+        const result = await response.json();
+        setContacts(result);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchContacts();
+  }, []);
