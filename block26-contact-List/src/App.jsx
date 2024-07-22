@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import ContactList from "./components/ContactList";
 import ContactDetails from "./components/ContactDetails";
-import Selected from "./components/selected.jsx";
+
 
 export default function App() {
   const [selectedContactId, setSelectedContactId] = useState(null);

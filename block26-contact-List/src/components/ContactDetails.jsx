@@ -1,5 +1,5 @@
 import React from "react";
-import ContactRow from "./ContactRow";
+
 
 
 const ContactDetails = ({ contact, setSelectedContactId }) => {
