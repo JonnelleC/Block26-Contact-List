@@ -1,10 +1,11 @@
 import React from "react";
+import 
 
 const ContactRow = ({ setSelectedContactId, contact }) => {
   return (
     <tr
       onClick={() => {
-        setSelectedContactId(contact.id);
+        setSelectedContactId(contact);
       }}
     >
       <td>{contact.name}</td>

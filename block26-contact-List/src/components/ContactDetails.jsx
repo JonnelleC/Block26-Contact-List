@@ -1,9 +1,11 @@
 import React from "react";
+import ContactRow from "./ContactRow";
+
 
 const ContactDetails = ({ contact, setSelectedContactId }) => {
-  if (!contact) {
-    return <div>Loading...</div>;
-  }
+  // if (!contact) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <div>
