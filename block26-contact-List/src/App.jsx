@@ -10,7 +10,9 @@ export default function App() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await fetch("https://api.example.com/contacts"); // Replace with actual API endpoint
+        const response = await fetch(
+          "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
+        ); // Replace with actual API endpoint
         const data = await response.json();
         setContacts(data);
       } catch (error) {
